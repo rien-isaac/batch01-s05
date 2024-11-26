@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  width: 360px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  color: blue;
+  font-size: 4rem;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  color: white;
+  background-color: grey;
+  border-radius: 1rem;
+
+  text-transform: uppercase;
+}
