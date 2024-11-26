@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- code here -->
+    <div class="container">
+      <p id="txtBalance">Available:</p>
+      <label for="mobile-number">Mobile: </label>
+      <input
+        type="text"
+        name="mobile-number"
+        id="mobile-number"
+        placeholder="mobile number"
+        value="0922-234-5678"
+      />
+      <br />
+      <label for="amount">Amount: </label>
+      <input
+        type="number"
+        name="amount"
+        id="amount"
+        placeholder="999"
+        value="20"
+      />
+      <br />
+      <button onclick="transferLoad()">Transfer</button>
+    </div>
+    <div>
+      <p class="history-logs" id="history-logs">History:</p>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
