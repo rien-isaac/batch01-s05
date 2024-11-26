@@ -10,11 +10,20 @@ body {
 }
 
 /* navigation bar */
-nav {
+.navigation-container {
   /* 1 rem = 16px default font size*/
   padding: 0.8rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid blue;
+}
+
+.navigation-bg {
+  background-color: blue;
+}
+
+nav img {
+  width: 70px;
+  height: 70px;
 }
 
 .nav-bar {
@@ -23,18 +32,9 @@ nav {
   margin: 0;
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   background-color: blue;
   padding: 10px 20px;
-}
-
-.nav-logo {
-  list-style-type: none;
-}
-
-.nav-logo img {
-  width: 150px;
-  height: auto;
 }
 
 .nav {
