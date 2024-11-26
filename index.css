@@ -14,7 +14,7 @@ body {
   /* 1 rem = 16px default font size*/
   padding: 0.8rem;
   margin-bottom: 2rem;
-  border-bottom: 1px solid blue;
+  /* border-bottom: 1px solid blue; */
 }
 
 .navigation-bg {
@@ -150,6 +150,7 @@ nav img {
 
 i {
   font-size: 3rem;
+  color: white;
 }
 
 footer {
