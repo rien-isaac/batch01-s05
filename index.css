@@ -148,6 +148,10 @@ nav img {
   cursor: pointer;
 }
 
+i {
+  font-size: 3rem;
+}
+
 footer {
   padding: 0.7rem;
   display: flex;
