@@ -72,6 +72,10 @@ nav img {
   text-align: center;
 }
 
+#home {
+  border-bottom: 1px solid blue;
+}
+
 #home button {
   color: white;
   font-weight: bold;
@@ -84,6 +88,7 @@ nav img {
 
 #projects {
   padding: 2rem 10% 3rem;
+  height: 100vh;
 }
 
 #projects h2 {
