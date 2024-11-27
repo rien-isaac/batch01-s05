@@ -42,8 +42,10 @@ function checkAccount() {
       //   makalogin ka dapat rito
       alert("Welcome " + accountNumber);
       window.location.href = "./load.html";
+      return;
     }
   }
+  invalidNumber("no record");
 }
 
 function invalidNumber(type) {
