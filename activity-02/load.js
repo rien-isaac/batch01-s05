@@ -1,4 +1,5 @@
 // let currentBalance = localStorage.getItem("defaultValue");
+let currentBalance = 0;
 let displayBalance = document.querySelector("#txtBalance");
 
 window.onload = function () {
