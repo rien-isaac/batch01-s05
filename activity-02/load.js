@@ -23,6 +23,9 @@ function transferLoad() {
       alert("Insufficient Balance");
       resetInputs();
       showLoanModal();
+    } else if (amount > 1000 || amount < 1) {
+      alert("Invalid Input. Please put from 1 - 1,000");
+      resetInputs();
     } else {
       addTransaction(mobileNumber, amount, "transfer load");
     }
