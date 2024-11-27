@@ -17,14 +17,14 @@ ul {
 
 li {
   list-style: none;
-  margin: 1rem 4rem;
+  margin: 1rem 1rem;
 }
 
-a {
-  text-decoration: none;
-  font-size: 1rem;
+.nav-btn {
+  font-size: 0.9rem;
   color: white;
   font-weight: 700;
+  border: none;
 }
 
 section {
@@ -32,9 +32,49 @@ section {
   margin: auto;
 }
 
+section h3 {
+  font-size: 0.8rem;
+  display: block;
+}
+
+h3 #txtBalance {
+  font-size: 2rem;
+}
+
+.balance {
+  padding: 3rem;
+  background-color: white;
+  box-shadow: 1rem 1rem 1rem 1rem #aaaaaa;
+  width: 50vw;
+  height: 50vw;
+
+  /* display: none; */
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  transform: translate(50%, 50%);
+
+  border-radius: 1rem;
+}
+
+.balance .balance-container {
+  display: flex;
+
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: left;
+}
+
+.balance-container h2 {
+  font-size: 2rem;
+}
+
 h3,
 label,
-.amount {
+.amount,
+.balance-container h2 {
   color: blue;
 }
 
@@ -84,6 +124,10 @@ button {
   margin-bottom: 2rem;
 }
 
+.balance-container .cancel-btn {
+  background-color: red;
+}
+
 #history {
 }
 
@@ -110,10 +154,11 @@ button {
 #history .history-item p span {
   font-size: 2rem;
   font-weight: 600;
-  margin-left: 3rem;
-  text-align: end;
+  /* margin-left: 3rem; */
+  /* text-align: end; */
 }
 
 #history .history-item p .mobile-number {
   font-size: 1rem;
+  text-align: start;
 }

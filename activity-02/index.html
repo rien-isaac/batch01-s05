@@ -10,7 +10,18 @@
   <body>
     <section>
       <h1>Pasaload</h1>
-      <a href="load.html">Login</a>
+      <div class="login-container">
+        <label for="account">Mobile Number:</label>
+        <input
+          type="number"
+          id="account"
+          name="account"
+          placeholder="09xx xxx xxxx"
+        />
+        <button onclick="login()" id="loginBtn">Login</button>
+      </div>
     </section>
+
+    <script src="./index.js"></script>
   </body>
 </html>

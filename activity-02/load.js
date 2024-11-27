@@ -1,9 +1,8 @@
-let currentBalance = 50;
+let currentBalance = 0;
 let displayBalance = document.querySelector("#txtBalance");
 
-// textBalance.textContent += currentBalance;
 window.onload = function () {
-  displayBalance.textContent = "Balance: " + currentBalance;
+  displayBalance.textContent = "₱" + currentBalance;
 };
 
 function transferLoad() {
@@ -12,48 +11,78 @@ function transferLoad() {
 
   var history = document.querySelector("#history");
 
-  // console.log(mobileNumber);
-  // console.log(amount);
+  let splitAccNum = mobileNumber.split("");
+  let mobileNumberLength = splitAccNum.length;
 
-  if (currentBalance <= 0 || amount > currentBalance) {
-    loanBalance();
+  if (mobileNumberLength != 11) {
+    alert("Invalid Number!");
+    resetInputs();
   } else {
-    addTransaction();
+    if (currentBalance <= 0 || amount > currentBalance) {
+      alert("Insufficient Balance");
+      resetInputs();
+      showLoanModal();
+    } else {
+      addTransaction(mobileNumber, amount, "transfer load");
+    }
   }
+}
 
-  displayBalance.textContent = "Balance: " + currentBalance;
+function logout() {
+  window.location.href = "./index.html";
+}
 
-  function addTransaction() {
+function showLoanModal() {
+  let loanModal = document.getElementById("balanceModal");
+
+  if (loanModal.style.display === "none") {
+    loanModal.style.display = "block";
+  } else {
+    loanModal.style.display = "none";
+  }
+}
+
+function getBalance() {
+  let inputLoanAmount = document.getElementById("loanBalanceAmount").value;
+
+  addTransaction(0, inputLoanAmount, "loan load");
+}
+
+function addTransaction(number, amount, type) {
+  var history = document.querySelector("#history");
+
+  var transaction = document.createElement("p");
+
+  if (type == "transfer load") {
     currentBalance = currentBalance - amount;
 
-    var transaction = document.createElement("p");
     transaction.innerHTML =
       '<div class="history-item"><p><span class="mobile-number">' +
-      mobileNumber +
+      number +
       '</span><span class="amount">-' +
       amount +
       "</span></p></div>";
-    history.appendChild(transaction);
+  } else {
+    currentBalance = currentBalance + parseInt(amount);
 
-    resetInputs();
-  }
-
-  function loanBalance() {
-    let loanAmount = 30;
-    currentBalance = currentBalance + loanAmount;
-
-    var transaction = document.createElement("p");
     transaction.innerHTML =
-      '<div class="history-item"><p><span class="mobile-number">Loaned</span><span class="amount">+' +
-      loanAmount +
+      '<div class="history-item"><p><span class="mobile-number">Loaned</span><span class="amount"> +' +
+      amount +
       "</span></p></div>";
-    history.appendChild(transaction);
 
-    resetInputs();
+    showLoanModal();
   }
 
-  function resetInputs() {
-    document.getElementById("mobile-number").value = "";
-    document.getElementById("amount").value = "";
-  }
+  history.appendChild(transaction);
+
+  resetInputs();
+
+  // let displayBalance = document.querySelector("#txtBalance");
+  displayBalance.textContent = "₱" + currentBalance;
+}
+
+function resetInputs() {
+  document.getElementById("mobile-number").value = "";
+  document.getElementById("amount").value = "";
+  document.getElementById("loanBalanceAmount").value = "";
 }

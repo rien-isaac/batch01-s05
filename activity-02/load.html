@@ -13,36 +13,57 @@
       <nav>
         <h1>Pasaload</h1>
         <ul>
-          <li><a>Get Loan</a></li>
-          <li><a href="index.html">Logout</a></li>
+          <li>
+            <button class="nav-btn" onclick="showLoanModal()">
+              Get Balance
+            </button>
+          </li>
+          <li><button class="nav-btn" onclick="logout()">Logout</button></li>
         </ul>
       </nav>
 
       <section>
-        <h3 id="txtBalance">Available: 50</h3>
+        <h3>Available Balance: <span id="txtBalance"></span></h3>
         <div class="form">
           <label for="mobile-number">Mobile: </label>
           <input
             type="text"
             name="mobile-number"
             id="mobile-number"
-            placeholder="mobile number"
+            placeholder="09xx xxx xxxx"
           />
 
           <label for="amount">Amount: </label>
-          <input type="number" name="amount" id="amount" placeholder="50" />
-          <button id="transferBtn" onclick="transferLoad()">Transfer</button>
+          <input type="number" name="amount" id="amount" placeholder="xxx" />
+          <button class="btn" id="transferBtn" onclick="transferLoad()">
+            Transfer
+          </button>
         </div>
 
         <div class="transaction-container">
           <h4>Transaction History</h4>
           <div id="history">
-            <!-- <div class="history-item">
-              <p>
-                <span class="mobile-number">000-000-000</span
-                ><span class="amount">+50</span>
-              </p>
-            </div> -->
+            <!-- history logs here -->
+          </div>
+        </div>
+
+        <!-- for loan balance -->
+        <div class="balance" id="balanceModal" style="display: none">
+          <div class="balance-container">
+            <h2 class="">Loan Balance</h2>
+            <label for="loanBalanceAmount"></label>
+            <input
+              type="number"
+              id="loanBalanceAmount"
+              name="loanBalanceAmount"
+              placeholder="xxxx"
+            />
+            <button onclick="getBalance()" class="btn" id="loanBtn">
+              Loan
+            </button>
+            <button class="btn cancel-btn" onclick="showLoanModal()">
+              Cancel
+            </button>
           </div>
         </div>
       </section>
