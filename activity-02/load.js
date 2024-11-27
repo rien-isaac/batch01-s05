@@ -1,4 +1,4 @@
-let currentBalance = 0;
+// let currentBalance = localStorage.getItem("defaultValue");
 let displayBalance = document.querySelector("#txtBalance");
 
 window.onload = function () {
@@ -45,7 +45,11 @@ function showLoanModal() {
 function getBalance() {
   let inputLoanAmount = document.getElementById("loanBalanceAmount").value;
 
-  addTransaction(0, inputLoanAmount, "loan load");
+  if (inputLoanAmount == "") {
+    alert("Put Amount");
+  } else {
+    addTransaction(0, inputLoanAmount, "loan load");
+  }
 }
 
 function addTransaction(number, amount, type) {

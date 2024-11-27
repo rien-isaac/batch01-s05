@@ -114,6 +114,14 @@ button {
   border-radius: 1rem;
 }
 
+.nav-btn:hover {
+  background-color: #00308f;
+}
+
+.btn:hover {
+  background-color: #00308f;
+}
+
 .transaction-container {
   margin-top: 5rem;
 }
@@ -126,6 +134,10 @@ button {
 
 .balance-container .cancel-btn {
   background-color: red;
+}
+
+.balance-container .cancel-btn:hover {
+  background-color: #aa0000;
 }
 
 #history {

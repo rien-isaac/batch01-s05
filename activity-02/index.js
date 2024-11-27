@@ -2,14 +2,18 @@ let accountNumber;
 
 let loginBtn = document.getElementById("loginBtn");
 
+let defaultBalance;
+
+// localStorage.setItem("defaultBalance", defaultBalance);
+
 let accounts = [
   {
-    mobile: "11111111111",
+    mobile: "09121231234",
     password: "testpass",
     balance: 300,
   },
   {
-    mobile: "00000000000",
+    mobile: "09781231234",
     password: "passtest",
     balance: 50,
   },
@@ -41,6 +45,7 @@ function checkAccount() {
     ) {
       //   makalogin ka dapat rito
       alert("Welcome " + accountNumber);
+      defaultBalance = accounts[checker].balance;
       window.location.href = "./load.html";
       return;
     }
