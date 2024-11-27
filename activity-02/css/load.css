@@ -1,7 +1,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: blue;
+  background-color: var(--primary);
   padding: 2rem 1rem;
   margin-bottom: 3rem;
 }
@@ -9,6 +9,9 @@ nav {
 h1 {
   font-size: 3rem;
   color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.2rem;
 }
 
 ul {
@@ -44,7 +47,7 @@ h3 #txtBalance {
 .balance {
   padding: 3rem;
   background-color: white;
-  box-shadow: 1rem 1rem 1rem 1rem #aaaaaa;
+  box-shadow: 0 0.9rem 1rem 0.3rem #4d82d6;
   width: 50vw;
   height: 50vh;
 
@@ -64,18 +67,22 @@ h3 #txtBalance {
 
   flex-direction: column;
   gap: 1rem;
-  justify-content: left;
+  width: 50%;
+  margin: auto;
 }
 
 .balance-container h2 {
   font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
 }
 
 h3,
 label,
 .amount,
 .balance-container h2 {
-  color: blue;
+  color: var(--primary);
 }
 
 h3 {
@@ -99,12 +106,12 @@ input {
   border-radius: 1rem;
   padding: 1rem;
   border: none;
-  outline: 1px solid grey;
+  outline: 1px solid var(--dark-primary);
   margin-bottom: 1rem;
 }
 
 button {
-  background-color: blue;
+  background-color: var(--primary);
   color: white;
   font-size: 1rem;
   font-weight: 700;
@@ -115,11 +122,19 @@ button {
 }
 
 .nav-btn:hover {
-  background-color: #00308f;
+  background-color: var(--dark-primary);
 }
 
 .btn:hover {
-  background-color: #00308f;
+  background-color: var(--dark-primary);
+}
+
+.logout-btn {
+  background-color: var(--accent);
+}
+
+.logout-btn:hover {
+  background-color: var(--dark-accent);
 }
 
 .transaction-container {
@@ -130,14 +145,15 @@ button {
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #0000a7;
 }
 
 .balance-container .cancel-btn {
-  background-color: red;
+  background-color: var(--accent);
 }
 
 .balance-container .cancel-btn:hover {
-  background-color: #aa0000;
+  background-color: var(--dark-accent);
 }
 
 #history {
@@ -148,7 +164,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem 0.8rem;
-  background-color: #f9f6ee;
+  background-color: var(--almost-white);
   border-radius: 1rem;
   width: 100%;
   margin-bottom: 1rem;
@@ -161,6 +177,8 @@ button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  color: #0000a7;
 }
 
 #history .history-item p span {

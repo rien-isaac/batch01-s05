@@ -1,7 +1,20 @@
+:root {
+  --primary: #0000c5;
+  --dark-primary: #007fff;
+  --accent: #ff033e;
+  --dark-accent: #ba0021;
+  --almost-white: #f0f8ff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
 }

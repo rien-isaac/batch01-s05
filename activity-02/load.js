@@ -78,7 +78,7 @@ function addTransaction(number, amount, type) {
     showLoanModal();
   }
 
-  history.appendChild(transaction);
+  history.prepend(transaction);
 
   resetInputs();
 
